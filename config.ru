@@ -2,8 +2,5 @@
 
 require_relative 'config/environment'
 
-require 'rack-livereload'
-
 run Rails.application
 
-use Rack::LiveReload
