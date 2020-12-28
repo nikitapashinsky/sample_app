@@ -8,16 +8,27 @@ module.exports = {
     "./app/javascript/**/*.js",
     "./app/javascript/**/*.vue"
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: colors.white,
+      gray: colors.gray,
+      coolgray: colors.coolGray,
+      cyan: colors.cyan,
+      lightblue: colors.lightBlue,
+      blue: colors.blue,
+      indigo: colors.indigo
+    },
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        gray: colors.coolGray,
-        cyan: colors.cyan,
-        lightblue: colors.lightBlue,
+        gray: {
+          950: '#141417'
+        },
       },
     },
   },
