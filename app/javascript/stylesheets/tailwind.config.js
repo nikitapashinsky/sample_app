@@ -19,7 +19,9 @@ module.exports = {
       cyan: colors.cyan,
       lightblue: colors.lightBlue,
       blue: colors.blue,
-      indigo: colors.indigo
+      indigo: colors.indigo,
+      lime: colors.lime,
+      red: colors.red
     },
     extend: {
       fontFamily: {
@@ -30,6 +32,9 @@ module.exports = {
           950: '#141417'
         },
       },
+      scale: {
+        '98': '.98',
+      },
     },
   },
   variants: {
@@ -37,6 +42,7 @@ module.exports = {
       scale: ['active'],
       backgroundColor: ['active'],
       textColor: ['active'],
+      padding: ['last'],
     },
   },
   plugins: [],

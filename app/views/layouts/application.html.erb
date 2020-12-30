@@ -12,10 +12,15 @@
   </head>
 
   <body class="dark:bg-gray-900">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <!-- Same as <%= content_tag(:div, message, class: "alert alert-#{message_type}") %> -->
+      <% end %>
       <%= render 'layouts/header' %>
       <div class="max-w-7xl mx-auto px-10 py-48">
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

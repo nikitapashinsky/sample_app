@@ -1,21 +1,21 @@
-<footer class="w-full bg-gray-50 dark:bg-gray-950">
-    <div class="max-w-7xl mx-auto px-10 pt-16 pb-32">
-        <div class="flex items-top justify-between h-20 mb-16">
+<div class="max-w-7xl mx-auto px-10">
+    <footer class="py-8 border-t border-coolgray-100 dark:border-gray-800">
+        <div class="flex items-center justify-between h-20">
             <div>
                 <div class="flex items-center space-x-2">
-                    <div class="mt-0.5 w-5 h-5 rounded-full bg-coolgray-400 dark:bg-gray-600"></div>
-                    <%= link_to "sample", '#', class: "text-2xl font-bold tracking-tighter text-coolgray-400 dark:text-gray-600" %>
+                    <div class="mt-0.5 w-5 h-5 rounded-full bg-coolgray-400 dark:bg-gray-500"></div>
+                    <%= link_to "sample", '#', class: "text-2xl font-bold tracking-tighter text-coolgray-400 dark:text-gray-500" %>
                 </div>
-                <p class="text-sm mt-3 leading-relaxed text-coolgray-500 dark:text-gray-400">
-                    The <a href="https://www.railstutorial.org/" class="text-coolgray-900 hover:text-coolgray-700 dark:text-gray-300 dark:hover:text-white">Ruby on Rails Tutorial</a></br>
-                    by <a href="https://www.michaelhartl.com/" class="text-coolgray-900 hover:text-coolgray-700 dark:text-gray-300 dark:hover:text-white">Michael Hartl</a>
-                </p>
             </div>
-            <div class="">
-                <%= link_to "About",     about_path,    class: "footer-link" %>
-                <%= link_to "Contact",   contact_path,  class: "footer-link" %>
-                <%= link_to "News", '#',                class: "footer-link" %>
+            <div class="flex items-center -mr-3">
+                <%= link_to "About",     about_path,    class: "nav-link" %>
+                <%= link_to "Contact",   contact_path,  class: "nav-link" %>
+                <%= link_to "News", '#',                class: "nav-link" %>
             </div>
         </div>
-    </div>
-</footer>
+        <p class="text-xs leading-relaxed text-coolgray-500 dark:text-gray-500">
+        The <a href="https://www.railstutorial.org/" class="text-coolgray-900 hover:text-coolgray-700 dark:text-gray-500 dark:hover:text-white">Ruby on Rails Tutorial</a></br>
+        by <a href="https://www.michaelhartl.com/" class="text-coolgray-900 hover:text-coolgray-700 dark:text-gray-500 dark:hover:text-white">Michael Hartl</a>
+        </p>
+    </footer>
+</div>

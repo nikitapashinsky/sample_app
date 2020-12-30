@@ -1,6 +1,26 @@
 <% provide(:title, 'Sign up') %>
 
-<div class="max-w-2xl">
-    <h1 class="text-7xl font-extrabold tracking-tight text-coolgray-900 dark:text-white">Sign up</h1>
-    <p class="text-2xl leading-relaxed mt-6 mb-9 font-normal text-coolgray-500 dark:text-gray-400">This will be a signup page for new users.</p>
+<div class="max-w-sm mx-auto flex flex-col items-center">
+    <h1 class="mb-8 text-5xl font-bold tracking-normal leading-tight text-coolgray-900 dark:text-white">Sign up</h1>
+    <%= form_with(model: @user, local: true, class: "flex flex-col min-w-full") do |f| %>
+        <!-- <%= render 'shared/error_messages' %> -->
+
+        <%= f.text_field :name, placeholder: "Name", class: "signup-input" %>
+
+        <%= error_message_for(:name) %>
+          
+        <%= f.email_field :email, placeholder: "Email", class: "signup-input" %>
+
+        <%= error_message_for(:email) %>
+
+        <%= f.password_field :password, placeholder: "Password", class: "signup-input" %>
+
+        <%= error_message_for(:password) %>
+
+        <!-- <%= f.password_field :password_confirmation, placeholder: "Confirm password (sorry)", class: "signup-input" %>
+
+        <%= error_message_for(:password_confirmation) %> -->
+
+        <%= f.submit "Let's get it", class: "signup-button" %>
+    <% end %>
 </div>

@@ -8,4 +8,11 @@ module ApplicationHelper
             page_title + " | " + base_title
         end
     end
+
+    def error_message_for(field)
+        error_message = @user.errors[field][0]
+        if error_message
+            raw "<span class='form-error'>#{error_message}</span>"
+        end
+    end
 end

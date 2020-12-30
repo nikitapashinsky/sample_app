@@ -82,27 +82,103 @@
 }
 
 @layer components {
+     h1, h2, h3, h4, h5, h6, p {
+          @apply    text-coolgray-900
+                    dark:text-white
+     }
+
      .nav-link {
-          @apply    py-2 px-4 rounded-lg 
-                    font-medium text-base text-coolgray-500 
-                    transition-all duration-100 ease-in-out 
-                    hover:text-coolgray-900 hover:bg-coolgray-100 
-                    active:bg-coolgray-200
-      
-                    dark:text-gray-400
-                    dark:hover:text-white dark:hover:bg-gray-800
-                    dark:active:bg-gray-700
-
-      
-      }
-
-      .footer-link {
-           @apply   py-2 px-2 
+          @apply    box-border
+                    py-2 px-3
                     text-sm font-medium text-coolgray-500
+                    transition
                     hover:text-coolgray-900
                     
                     dark:text-gray-400
                     dark:hover:text-white
+      }
+
+      .debug_dump {
+           @apply   max-w-7xl mx-auto my-12
+                    box-border
+                    py-8 px-8
+                    rounded-lg
+                    text-coolgray-900
+                    bg-coolgray-200
+
+                    dark:text-white
+                    dark:bg-gray-800
+      }
+
+      .gravatar {
+           @apply   rounded-full
+                    w-24
+      }
+
+      .signup-input {
+          @apply    block w-full
+                    px-3 mb-4 h-10 
+                    rounded-md
+
+                    text-sm text-coolgray-900 placeholder-coolgray-500 
+                    
+                    outline-none
+
+                    transition
+
+                    ring-0
+                    focus:ring-2 focus:ring-cyan-500
+                    bg-coolgray-100 hover:bg-coolgray-300 focus:bg-white hover:bg-opacity-50 focus:bg-opacity-50
+
+                    dark:border-gray-700
+                    dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700
+                    dark:text-white dark:placeholder-gray-500
+      }
+
+      .signup-button {
+           @apply   w-full h-10
+                    rounded-md
+
+                    cursor-pointer
+                    outline-none
+
+                    transition
+                    transform
+
+                    text-sm text-white font-semibold
+                    bg-cyan-500 hover:bg-cyan-600
+
+                    focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-25 focus:bg-cyan-600
+
+                    active:scale-98
+
+                    shadow-sm
+      }
+
+      .form-error {
+           @apply   inline-block 
+                    -mt-2 mb-4 
+                    text-xs leading-relaxed 
+                    
+                    text-red-700
+                    dark:text-red-400
+      }
+
+      .alert {
+           @apply   absolute
+                    max-w-md
+                    mx-auto
+                    top-12 inset-x-0
+                    p-4
+
+                    text-sm font-medium text-coolgray-500
+
+                    rounded-lg
+                    bg-white
+                    shadow-lg
+
+                    dark:text-gray-400
+                    dark:bg-gray-700
       }
 }
 
