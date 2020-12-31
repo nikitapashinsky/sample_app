@@ -1,7 +1,7 @@
 <% provide(:title, 'Sign up') %>
 
 <div class="max-w-sm mx-auto flex flex-col items-center">
-    <h1 class="mb-8 text-5xl font-bold tracking-normal leading-tight text-coolgray-900 dark:text-white">Sign up</h1>
+    <h1 class="mb-8 text-5xl font-bold tracking-tight leading-tight text-coolgray-900 dark:text-white">Sign up</h1>
     <%= form_with(model: @user, local: true, class: "flex flex-col min-w-full") do |f| %>
         <!-- <%= render 'shared/error_messages' %> -->
 
@@ -22,5 +22,7 @@
         <%= error_message_for(:password_confirmation) %> -->
 
         <%= f.submit "Let's get it", class: "signup-button" %>
+
+        <p class="mt-6 text-center text-sm font-semibold transition text-coolgray-500 hover:text-cyan-600 dark:text-gray-400 dark:hover:text-white"><%= link_to "Already have an account? Log in.", login_path %></p>
     <% end %>
 </div>

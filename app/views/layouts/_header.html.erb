@@ -6,9 +6,24 @@
                 <%= link_to "sample", root_path, class: "text-2xl font-bold tracking-tighter text-coolgray-900 dark:text-white" %>
             </div>
             <div class="flex items-center">
-                <%= link_to "Home",   root_path, class: "nav-link" %>
-                <%= link_to "Help",   help_path, class: "nav-link" %>
-                <%= link_to "Log In", '#',       class: "nav-link ml-3 rounded-lg bg-coolgray-100 hover:bg-coolgray-200 dark:bg-gray-800 dark:hover:bg-gray-700" %>
+                <% if logged_in? %>
+                    <%= link_to "Users", '#', class: "nav-link" %>
+                    <div x-data="{ open: false }" class="relative -mr-3">
+                        <button x-on:click="open = true" class="flex items-center focus:outline-none max-w-full nav-link">
+                            <%= nav_gravatar_for current_user, size: 200 %>
+                            <%= current_user.name %>
+                        </button>
+                        <!-- Dropdown Body -->
+                        <div x-show="open" x-on:click.away="open = false" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="transform opacity-0 scale-95 -translate-y-2" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top absolute left-11 w-36 mt-2 rounded-md shadow-xl bg-white dark:bg-gray-800">   
+                            <%= link_to "Profile", current_user, class: "transition block px-3 py-2 rounded-t-md text-sm font-medium text-coolgray-500 hover:bg-coolgray-100 hover:text-coolgray-900 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 hover:bg-opacity-30" %>
+                            <a href="#" class="transition block px-3 py-2 text-sm font-medium text-coolgray-500 hover:bg-coolgray-100 hover:text-coolgray-900 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 hover:bg-opacity-30">Settings</a>
+                            <%= link_to "Log out", logout_path, method: :delete, class: "transition block px-3 py-2 rounded-b-md border-t border-coolgray-200 dark:border-gray-700 border-opacity-50 text-sm font-medium text-coolgray-500 hover:bg-coolgray-100 hover:text-coolgray-900 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 hover:bg-opacity-30" %>
+                        </div>
+                        <!-- // Dropdown Body -->
+                    </div>
+                <% else %>
+                    <%= link_to "Log In", login_path, class: "nav-link ml-3 rounded-lg bg-coolgray-100 hover:bg-coolgray-200 dark:bg-gray-800 dark:hover:bg-gray-700" %>
+                <% end %>                
             </div>
         </div>
     </nav>

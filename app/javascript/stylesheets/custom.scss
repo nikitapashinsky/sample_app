@@ -115,6 +115,12 @@
                     w-24
       }
 
+      .nav-gravatar {
+           @apply   rounded-full
+                    w-8
+                    mr-3
+      }
+
       .signup-input {
           @apply    block w-full
                     px-3 mb-4 h-10 
