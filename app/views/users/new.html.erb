@@ -5,15 +5,15 @@
     <%= form_with(model: @user, local: true, class: "flex flex-col min-w-full") do |f| %>
         <!-- <%= render 'shared/error_messages' %> -->
 
-        <%= f.text_field :name, placeholder: "Name", class: "signup-input" %>
+        <%= f.text_field :name, placeholder: "Name", class: "signup-input mb-4" %>
 
         <%= error_message_for(:name) %>
           
-        <%= f.email_field :email, placeholder: "Email", class: "signup-input" %>
+        <%= f.email_field :email, placeholder: "Email", class: "signup-input mb-4" %>
 
         <%= error_message_for(:email) %>
 
-        <%= f.password_field :password, placeholder: "Password", class: "signup-input" %>
+        <%= f.password_field :password, placeholder: "Password", class: "signup-input mb-6" %>
 
         <%= error_message_for(:password) %>
 

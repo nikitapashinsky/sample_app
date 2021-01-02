@@ -41,6 +41,8 @@ module.exports = {
     extend: {
       scale: ['active'],
       backgroundColor: ['active'],
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
       textColor: ['active'],
       padding: ['first', 'last'],
       borderRadius: ['first', 'last'],
