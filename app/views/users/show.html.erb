@@ -1,4 +1,4 @@
 <% provide(:title, @user.name) %>
-<%= gravatar_for @user, size: 200 %>
+<%= gravatar_for(@user, { size: 200, class: "w-24 rounded-full" })%>
 <h1 class="mt-4 text-xl font-bold"><%= @user.name %></h1>
 <p class="text-sm text-coolgray-500 dark:text-gray-400"><%= @user.email.downcase %></p>

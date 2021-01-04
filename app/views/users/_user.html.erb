@@ -1,0 +1,14 @@
+<div class="group flex flex-row justify-between items-center p-4 transition text font-medium dark:text-gray-400 rounded-xl hover:bg-coolgray-100 dark:hover:bg-gray-800 hover:shadow-xl">
+    <a href="<%= url_for user %>" class="flex items-center flex-grow dark:group-hover:text-white">
+        <%= gravatar_for(user, { size: 200, class: "w-14 rounded-full mr-4" }) %>
+        <%= user.name %>
+    </a>
+    
+    <% if current_user.admin? && !current_user?(user) %>
+        
+            <%= link_to "Delete", user, method: :delete,
+                                        data: { confirm: "Are you sure you want to delete #{user.name}? This cannot be undone." },
+                                        class: "px-3 py-2 -mr-2 text-sm dark:hover:text-white" %>
+        
+    <% end %>
+</div>

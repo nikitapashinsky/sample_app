@@ -96,10 +96,10 @@
                     
                     dark:text-gray-400
                     dark:hover:text-white
-      }
+     }
 
-      .debug_dump {
-           @apply   max-w-7xl mx-auto my-12
+     .debug_dump {
+          @apply    max-w-7xl mx-auto my-12
                     box-border
                     py-8 px-8
                     rounded-lg
@@ -108,21 +108,10 @@
 
                     dark:text-white
                     dark:bg-gray-800
-      }
+     }
 
-      .gravatar {
-           @apply   rounded-full
-                    w-24
-      }
-
-      .nav-gravatar {
-           @apply   rounded-full
-                    w-8
-                    mr-3
-      }
-
-      .signup-input {
-          @apply    block w-full
+     .form-input {
+     @apply         block w-full
                     px-3 h-10 
                     rounded-md
 
@@ -139,10 +128,10 @@
                     dark:border-gray-700
                     dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700
                     dark:text-white dark:placeholder-gray-500
-      }
+     }
 
-      .signup-button {
-           @apply   w-full h-10
+     .form-button {
+          @apply    w-full h-10
                     rounded-md
 
                     cursor-pointer
@@ -159,19 +148,25 @@
                     active:scale-98
 
                     shadow-sm
-      }
+     }
 
-      .form-error {
-           @apply   inline-block 
+     .form-error {
+          @apply    inline-block 
                     -mt-2 mb-4 
                     text-xs leading-relaxed 
                     
                     text-red-700
                     dark:text-red-400
-      }
+     }
 
-      .alert {
-           @apply   absolute
+     .form-label {
+          @apply    text-sm font-medium
+
+                    dark:text-gray-400
+     }
+
+     .alert {
+          @apply    absolute
                     max-w-md
                     mx-auto
                     top-12 inset-x-0
@@ -185,7 +180,53 @@
 
                     dark:text-gray-400
                     dark:bg-gray-700
-      }
+     }
+
+     .pagination {
+          @apply    relative inline-flex 
+                    text-sm font-semibold
+                    shadow-md
+                    
+                    
+     }
+
+     .pagination .page a {
+          @apply    px-3 py-2
+                    transition
+                    dark:bg-gray-800
+                    dark:hover:bg-gray-700
+     }
+
+
+
+     .pagination .page {
+          @apply    relative inline-flex items-center
+                    dark:text-gray-400
+     }
+
+     .pagination .current {
+          @apply    px-3 py-2
+                    text-white
+                    bg-cyan-500
+     }
+
+     .pagination .prev,
+     .pagination .prev a {
+          @apply    rounded-l-lg dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white
+     }
+
+     .pagination .next,
+     .pagination .next a {
+          @apply    rounded-r-lg dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white
+     }
+
+     .pagination .disabled {
+          @apply    px-3
+                    
+                    dark:text-gray-700
+                    dark:hover:text-gray-700
+                    dark:hover:bg-gray-800
+     }
 }
 
 

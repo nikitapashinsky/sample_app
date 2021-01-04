@@ -3,25 +3,24 @@
 <div class="max-w-sm mx-auto flex flex-col items-center">
     <h1 class="mb-8 text-5xl font-bold tracking-tight leading-tight text-coolgray-900 dark:text-white">Sign up</h1>
     <%= form_with(model: @user, local: true, class: "flex flex-col min-w-full") do |f| %>
-        <!-- <%= render 'shared/error_messages' %> -->
 
-        <%= f.text_field :name, placeholder: "Name", class: "signup-input mb-4" %>
+        <%= f.text_field :name, placeholder: "Name", class: "form-input mb-4" %>
 
         <%= error_message_for(:name) %>
           
-        <%= f.email_field :email, placeholder: "Email", class: "signup-input mb-4" %>
+        <%= f.email_field :email, placeholder: "Email", class: "form-input mb-4" %>
 
         <%= error_message_for(:email) %>
 
-        <%= f.password_field :password, placeholder: "Password", class: "signup-input mb-6" %>
+        <%= f.password_field :password, placeholder: "Password", class: "form-input mb-4" %>
 
         <%= error_message_for(:password) %>
 
-        <!-- <%= f.password_field :password_confirmation, placeholder: "Confirm password (sorry)", class: "signup-input" %>
+        <!-- <%= f.password_field :password_confirmation, placeholder: "Confirm password (sorry)", class: "form-input" %>
 
         <%= error_message_for(:password_confirmation) %> -->
 
-        <%= f.submit "Let's get it", class: "signup-button" %>
+        <%= f.submit "Let's get it", class: "form-button mt-2" %>
 
         <p class="mt-6 text-center text-sm font-semibold transition text-coolgray-500 hover:text-cyan-600 dark:text-gray-400 dark:hover:text-white"><%= link_to "Already have an account? Log in.", login_path %></p>
     <% end %>

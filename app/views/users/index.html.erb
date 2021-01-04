@@ -1,0 +1,11 @@
+<% provide(:title, "All users") %>
+<h1 class="mb-8 text-5xl font-bold tracking-tight leading-tight text-coolgray-900 dark:text-white">All users</h1>
+
+<%= render partial: 'shared/pagination', locals: {pagy: @pagy} %>
+
+<div class="my-6">
+    <%= render @users %> 
+</div>
+
+<%= render partial: 'shared/pagination', locals: {pagy: @pagy} %>
+
